@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+
+<configuration>
+
+	<!-- 配置Mybatis的相关配置 -->
+    
+	
+
+
+	<!-- 分页插件 -->
+	<plugins>
+		<plugin
+			interceptor="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
+		</plugin>
+	</plugins>
+
+	<!-- 映射文件 -->
+	<mappers>
+	    <mapper resource="com/mapper/userMapper.xml"/>
+		<mapper resource="com/mapper/deviceMapper.xml"/>
+		<mapper resource="com/mapper/hotelMapper.xml"/>
+		<mapper resource="com/mapper/picMapper.xml"/>
+		<mapper resource="com/mapper/room_detailMapper.xml"/>
+		<mapper resource="com/mapper/room_deviceMapper.xml"/>
+		<mapper resource="com/mapper/roomMapper.xml"/>
+		<mapper resource="com/mapper/rootMapper.xml"/>
+		<mapper resource="com/mapper/user_order_detailMapper.xml"/>
+		<mapper resource="com/mapper/user_orderMapper.xml"/>
+		<mapper resource="com/mapper/typeMapper.xml"/>
+	</mappers>
+	
+</configuration>
+
+

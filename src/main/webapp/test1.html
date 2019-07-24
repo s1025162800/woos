@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<input type="text" id="id" >
+<input type="text" id="name" >
+<input type="button" id="btn">
+<script>
+    $('#btn').click(function () {
+        var name=$('#name').val();
+        var id=$('#id').val();
+        var test={"name":name,"id":id};
+        var datajson=JSON.stringify(test);
+        $.ajax({
+            url:"test",
+            contentType:"application/json;charset=UTF-8",
+            data:datajson,
+            type:"post",
+            dataType:"json",
+            success: function () {
+                alert("测试成功")
+            }
+        });
+    });
+</script>
+</body>
+</html>

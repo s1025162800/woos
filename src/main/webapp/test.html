@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<input type="text" id="room_name" >
+<input type="button" id="btn">
+<script>
+    $('#btn').click(function () {
+        var room_name=$('#room_name').val();
+        $.ajax({
+          url:"test",
+            contentType:"application/json;charset=UTF-8",
+            data:{"room_name":room_name},
+            type:post,
+            dataType:"json",
+            success: function () {
+                alert("测试成功")
+            }
+        });
+    });
+</script>
+</body>
+</html>
