@@ -48,6 +48,13 @@ public class AddRoomAction {
         sum=true;
         return "upload.jsp";
     }
+    @RequestMapping("/index1")
+        public ModelAndView INDEX(){
+        ModelAndView modelAndView=new ModelAndView();
+        modelAndView.setViewName("/qwer");
+        return modelAndView;
+    }
+
     @ResponseBody
     @RequestMapping("/test")
     public String test(@RequestBody test test) {
